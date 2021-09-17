@@ -16,3 +16,9 @@ const myCar = carMakers.pop();
 carMakers.map((car: string): string => {
   return car.toUpperCase();
 });
+
+// Flexible types
+
+const importantDates = [new Date(), '2030-10-10']; // type inference: const importantDates: (string | Date)[]
+const importantDates1: (Date | string)[] = [new Date()];
+importantDates1.push('2030-10-10');
