@@ -136886,6 +136886,7 @@ var faker_1 = __importDefault(require("faker"));
 
 var User = function () {
   function User() {
+    this.color = 'red';
     this.name = faker_1.default.name.firstName();
     this.location = {
       lat: parseFloat(faker_1.default.address.latitude()),
@@ -136919,6 +136920,7 @@ var faker_1 = __importDefault(require("faker"));
 
 var Company = function () {
   function Company() {
+    this.color = 'blue';
     this.companyName = faker_1.default.company.companyName();
     this.catchPhrase = faker_1.default.company.catchPhrase();
     this.location = {
@@ -137022,7 +137024,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54357" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54525" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
