@@ -1,4 +1,0 @@
-import {MatchResult} from "./MatchResults";
-
-// Tuple
-type MatchData = [Date, string, string, number, number, MatchResult, string];
