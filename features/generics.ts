@@ -50,3 +50,33 @@ function printAnything<T>(arr: T[]): void {
 
 printAnything<string>(['a', 'b', 'c']);
 // printAnything(['a', 'b', 'c']); // we don't have to add the type annotation but it's advisable for clarity.
+
+// Generic Constrains
+
+class Car {
+  print() {
+    console.log('I am a car');
+  }
+}
+
+class House {
+  print() {
+    console.log('I am a house');
+  }
+}
+
+// Creating a generic constrain
+
+interface Printable {
+  print(): void;
+}
+
+function printHousesOrCars<T extends Printable>(arr: T[]): void {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].print();
+  }
+}
+
+printHousesOrCars<House>([new House(), new House()]);
+
+printHousesOrCars<Car>([new Car(), new Car()]);
