@@ -151,7 +151,11 @@ var User = /*#__PURE__*/function () {
     }
   }, {
     key: "on",
-    value: function on(eventName, callback) {}
+    value: function on(eventName, callback) {
+      var handlers = this.events[eventName] || [];
+      handlers.push(callback);
+      this.events[eventName] = handlers;
+    }
   }]);
 
   return User;
@@ -170,13 +174,10 @@ var User_1 = require("./models/User");
 var user = new User_1.User({
   name: 'myname',
   age: 20
-}); // user.set({ name: 'newname', age: 99 });
-
-user.set({
-  age: 99
 });
-console.log(user.get('name'));
-console.log(user.get('age'));
+user.on('change', function () {});
+user.on('change', function () {});
+console.log(user);
 },{"./models/User":"src/models/User.ts"}],"../../../../../../opt/homebrew/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -205,7 +206,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49734" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54311" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
