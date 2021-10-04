@@ -136,6 +136,7 @@ var User = /*#__PURE__*/function () {
     _classCallCheck(this, User);
 
     this.data = data;
+    this.events = {};
   }
 
   _createClass(User, [{
@@ -148,6 +149,9 @@ var User = /*#__PURE__*/function () {
     value: function set(update) {
       Object.assign(this.data, update);
     }
+  }, {
+    key: "on",
+    value: function on(eventName, callback) {}
   }]);
 
   return User;
