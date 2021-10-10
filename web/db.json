@@ -9,6 +9,21 @@
       "name": "myname",
       "age": 20,
       "id": 2
+    },
+    {
+      "name": "Paco",
+      "age": "50",
+      "id": 3
+    },
+    {
+      "name": "Victoria",
+      "age": "45",
+      "id": 4
+    },
+    {
+      "name": "Nico",
+      "age": "49",
+      "id": 5
     }
   ]
 }
